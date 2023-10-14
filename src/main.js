@@ -15,13 +15,13 @@ buttonConsult.addEventListener('click', async (event) => {
         console.log(data);
         preEl.innerHTML = '';
         preEl.innerHTML = JSON.stringify(data);
-        //return data;
+        return data;
     } catch (error) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'CEP inválido, tente novamente!',
         });
-        //return error.message;
+        return error.message;
     }
 });
